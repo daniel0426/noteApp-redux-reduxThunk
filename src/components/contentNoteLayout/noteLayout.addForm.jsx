@@ -7,6 +7,7 @@ const {TextArea} = Input;
 const addForm = (props) => {
   return(
     <Card key="addForm" id="addForm"
+    style={{marginBottom: "2em", border: "2px solid darkgray"}}
     title={
       <Input required value={props.inputTitle} placeholder="Write the note title" style={{width:"60%"}} onChange={props.onChangeTitle} >
       </Input>
