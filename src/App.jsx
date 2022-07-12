@@ -1,15 +1,16 @@
 import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React, {Component} from 'react'
+import "antd/dist/antd.css";
 
+import NoteListContainer from './containers/noteListContainer';
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-      
+    <div>
+      <NoteListContainer />
     </div>
   )
 }
 
-export default App
+export default App;

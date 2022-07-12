@@ -10,10 +10,10 @@ const noteLayout = ({
   onChangeTitle,
   onChangeContent,
   onSubmit, 
-  onRemove
+  onDelete
 }) => {
   const notes = noteList.map((note)=> (
-    <Note key={note.id} title={note.title} content={note.content} id={note.id} onRemove={()=>onRemove(note.id)} />
+    <Note key={note.id} title={note.title} content={note.content} id={note.id} onRemove={()=>onDelete(note.id)} />
   ));
 
   return (
