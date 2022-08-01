@@ -4,14 +4,21 @@ import App from './App';
 import {Provider} from 'react-redux';
 
 import {createStore, applyMiddleware} from 'redux';
-import noteReducer from './store/modules/index';
+import rootReducer, {rootSaga} from './store/modules/index';
 //middleware
 import loggerMiddleware from './lib/logger';
-import reduxThunk from 'redux-thunk';
+// import reduxThunk from 'redux-thunk';
+import createSagaMiddleware from 'redux-saga';
 
+const sagaMiddleware = createSagaMiddleware();
+
+const store = createStore(rootReducer, applyMiddleware(loggerMiddleware, sagaMiddleware));
+sagaMiddleware.run(rootSaga);
+console.log(store.getState);
 
 const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
-const store = createStore(noteReducer, applyMiddleware(loggerMiddleware, reduxThunk));
+
+
 
 ReactDOM.render(
   <Provider store={store}>

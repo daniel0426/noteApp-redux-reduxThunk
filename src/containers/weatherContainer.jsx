@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Weather from '../components/weather/weather';
-import { getWeather } from '../store/modules/weather';
+import { getWeather } from '../store/modules/weather-saga';
 
 const WeatherContainer = ()=> {
   const dispatch = useDispatch();
