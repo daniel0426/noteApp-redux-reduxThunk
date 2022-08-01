@@ -26,8 +26,8 @@ const initialState = {
   noteList : [
     {
       id: 0,
-      title:'First Note',
-      content :'Good to have my own digital note!'
+      title:'First Note 😉',
+      content :'Good to have my own digital note!, If you have no idea, Just write your emotional state based on todays weather above.'
     }
   ]
 }
